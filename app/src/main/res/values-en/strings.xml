@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CE-1257218</string>
+    <string name="created">Created</string>
+    <string name="registered">Registered</string>
+    <string name="decision">Resolve to</string>
+    <string name="responsible">Responsible</string>
+
+
+    <!--resources string-->
+    <string name="economy_name">Municipal economy</string>
+    <string name="in_work_name">In work</string>
+    <string name="created_name">25 March 2016</string>
+    <string name="registered_name">26 March 2016</string>
+    <string name="decision_date_name">30 April 2016</string>
+    <string name="responsible_name">Dnipropetrovsk MVK ()</string>
+    <string name="description_name">Bad roads, in the streets: Popova and Khorolska, side street Khorolsky.
+        In urban-type settlement Diyivka(178 km)</string>
+
+</resources>

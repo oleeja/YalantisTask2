@@ -1,0 +1,34 @@
+<resources>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">100dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_padding">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="background_padding_top">300dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="size_text">15sp</dimen>
+    <dimen name="size_big_text">18sp</dimen>
+
+    <dimen name="padding_bottom_top">5dp</dimen>
+    <dimen name="padding_left_right">15dp</dimen>
+
+    <dimen name="line_height">1dp</dimen>
+    <dimen name="recycler_height">200dp</dimen>
+
+    <dimen name="recycler_negative_margin">-16dp</dimen>
+
+    <dimen name="corner_radius">50dp</dimen>
+    <dimen name="link_text_size">12sp</dimen>
+    <dimen name="tab_padding">8dp</dimen>
+    <dimen name="indicator_height">4dp</dimen>
+    <dimen name="item_height">126dp</dimen>
+    <dimen name="item_padding">8dp</dimen>
+    <dimen name="top_icon_padding">22dp</dimen>
+    <dimen name="drawer_header_bottom_padding">24dp</dimen>
+    <dimen name="text_size_header_drawer">24sp</dimen>
+    <dimen name="vertical_divider_width">0.2dp</dimen>
+</resources>

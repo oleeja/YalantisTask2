@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    style="@style/MatchParent"
+    tools:openDrawer="start">
+
+    <include
+        style="@style/MatchParent"
+        layout="@layout/app_bar_main" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer">
+
+        <TextView
+            style="@style/WrapContent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/sing_with_love"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/colorLink"
+            android:textSize="@dimen/link_text_size" />
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

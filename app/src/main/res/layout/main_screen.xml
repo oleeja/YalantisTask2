@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    style="@style/MyStyleForLayouts">
+
+    <LinearLayout
+        style="@style/MyStyleForLayouts"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_padding"
+        android:paddingRight="@dimen/activity_horizontal_padding">
+
+        <TextView
+            android:id="@+id/textViewEconomy"
+            style="@style/MyStyleForTextView"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/size_big_text" />
+
+        <TextView
+            android:id="@+id/textViewInWork"
+            style="@style/MyStyleForCustomTextView"
+            android:paddingBottom="@dimen/padding_bottom_top"
+            android:paddingLeft="@dimen/padding_left_right"
+            android:paddingRight="@dimen/padding_left_right"
+            android:paddingTop="@dimen/padding_bottom_top" />
+
+        <View
+            style="@style/MyViewStyle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        <RelativeLayout style="@style/MyStyleForLayouts">
+
+            <TextView
+                android:id="@+id/textViewCreated"
+                style="@style/MyStyleForTextViewLeft"
+                android:text="@string/created" />
+
+            <TextView
+                android:id="@+id/textViewCreatedDate"
+                style="@style/MyStyleForTextView"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            style="@style/MyViewStyle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        <RelativeLayout style="@style/MyStyleForLayouts">
+
+            <TextView
+                android:id="@+id/textViewRegistered"
+                style="@style/MyStyleForTextViewLeft"
+                android:text="@string/registered" />
+
+            <TextView
+                android:id="@+id/textViewRegisteredDate"
+                style="@style/MyStyleForTextView"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            style="@style/MyViewStyle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        <RelativeLayout style="@style/MyStyleForLayouts">
+
+            <TextView
+                android:id="@+id/textViewDecision"
+                style="@style/MyStyleForTextViewLeft"
+                android:text="@string/decision" />
+
+            <TextView
+                android:id="@+id/textViewDecisionDate"
+                style="@style/MyStyleForTextView"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            style="@style/MyViewStyle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        <RelativeLayout style="@style/MyStyleForLayouts">
+
+            <TextView
+                android:id="@+id/textViewResponsible"
+                style="@style/MyStyleForTextViewLeft"
+                android:text="@string/responsible" />
+
+            <TextView
+                android:id="@+id/textViewResponsibleName"
+                style="@style/MyStyleForTextView"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            style="@style/MyViewStyle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            style="@style/MyStyleForTextView" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/info_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/recycler_height"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/recycler_negative_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</ScrollView>
