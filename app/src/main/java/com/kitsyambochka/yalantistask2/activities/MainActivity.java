@@ -23,6 +23,27 @@ import com.kitsyambochka.yalantistask2.interfaces.ScrollListener;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+// Fix lint warnings in values/styles.
+// There are three languages in the app. Clean up string resources, add translations. 
+// Remove hardcoded strings in navigation drawer.
+// no_image.png in densityless folder
+// Simplify “if” in ScrollFabBehavior.java, line 22
+// Don’t forget to use code formatting (InfoActivity.java)
+// Read about default values of primitive data types and remove unnecessary code(FragmentForListView.java )
+// (InfoActivity.java, MainActivity.java) Read lint warnings!  Check for null to avoid NullPointerExceptions
+// main_screen.xml RecyclerView has empty body
+// AndroidManifest.xml, no need to support RTL
+// You should use butterknife to bind views as ViewPager, TabLayout and NavigationView in MainActivity because you’ve already used it to bind other views
+// Naming of views should contain view class name to make code more readable,
+// for example:  TextView mResponsibleTextView or  TextView mTvResponsible. Names should describes meaning 
+// http://prntscr.com/axdmgr if text will be long in textViewDecisionDate it will cause overlaping of two fields, same to other relative layouts in main_screen.xml
+// main_screen.xml, app_bar_main.xml - not clear naming
+// Use switch here and left //TODO: ‘s in empty places or remove it 
+// Add ViewHolder class to extended RecyclerView Adapter (MainRecyclerAdapter.java)
+// like this http://prntscr.com/axdtta, to prevent class casting in onBindViewHolder. Same in InfoAdapterForRecyclerView.java
+// nav_header_main can be simplified, because there is only one child in layout.
+// Use FrameLayout if don’t need any features of more complicated layouts.
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, ScrollListener {
 
