@@ -2,25 +2,23 @@ package com.kitsyambochka.yalantistask2.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.kitsyambochka.yalantistask2.R;
+import com.kitsyambochka.yalantistask2.adapters.PagerAdapterForMain;
 import com.kitsyambochka.yalantistask2.fragments.FragmentForListView;
 import com.kitsyambochka.yalantistask2.fragments.FragmentForRecyclerView;
-import com.kitsyambochka.yalantistask2.R;
 import com.kitsyambochka.yalantistask2.interfaces.ScrollListener;
-import com.kitsyambochka.yalantistask2.adapters.PagerAdapterForMain;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -31,6 +29,9 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.toolbar) Toolbar mToolbar;
     @Bind(R.id.fab) FloatingActionButton mFab;
     @Bind(R.id.drawer_layout) DrawerLayout mDrawer;
+    @Bind(R.id.nav_view) NavigationView mNavigationView;
+    @Bind(R.id.viewPager) ViewPager mViewPager;
+    @Bind(R.id.tabLayout) TabLayout mTabLayout;
 
     public static final int ITEM_COUNTS = 10;
 
@@ -41,14 +42,16 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this);
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setTitle(R.string.all_appeals);
 
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //TODO: do some logic for FAB
             }
         });
 
@@ -60,14 +63,12 @@ public class MainActivity extends AppCompatActivity
         toggle.setToolbarNavigationClickListener(this);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        mNavigationView.setNavigationItemSelectedListener(this);
 
         initViewPagerAndTabs();
     }
 
     private void initViewPagerAndTabs() {
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         PagerAdapterForMain pagerAdapter = new PagerAdapterForMain(getSupportFragmentManager());
         pagerAdapter.addFragment(FragmentForRecyclerView.createInstance(ITEM_COUNTS),
                 getString(R.string.tab_1));
@@ -75,10 +76,9 @@ public class MainActivity extends AppCompatActivity
                 getString(R.string.tab_2));
         pagerAdapter.addFragment(FragmentForListView.createInstance(ITEM_COUNTS),
                 getString(R.string.tab_3));
-        viewPager.setAdapter(pagerAdapter);
+        mViewPager.setAdapter(pagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.setupWithViewPager(viewPager);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 
     @Override
@@ -98,12 +98,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -112,10 +106,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.all) {
-
-        } else if (id == R.id.map) {
-
+        switch (id){
+            case R.id.all:
+                //TODO: do some logic for item in navigation drawer
+                break;
+            case R.id.map:
+                //TODO: do some logic for item in navigation drawer
+                break;
         }
 
         mDrawer.closeDrawer(GravityCompat.START);

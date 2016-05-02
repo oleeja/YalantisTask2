@@ -31,4 +31,5 @@
     <dimen name="drawer_header_bottom_padding">24dp</dimen>
     <dimen name="text_size_header_drawer">24sp</dimen>
     <dimen name="vertical_divider_width">0.2dp</dimen>
+    <dimen name="width_text_view">0dp</dimen>
 </resources>

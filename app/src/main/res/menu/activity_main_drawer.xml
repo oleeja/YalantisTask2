@@ -5,16 +5,17 @@
         <item
             android:id="@+id/all"
             android:icon="@drawable/ic_issues"
-            android:title="Всі звернення" />
+            android:title="@string/drawer_all_appeals" />
         <item
             android:id="@+id/map"
             android:icon="@drawable/ic_map"
-            android:title="Звернення на мапі" />
+            android:title="@string/drawer_on_map" />
     </group>
 
-    <group android:checkableBehavior="single"
-        android:id="@+id/enter_in_account">
-        <item android:title="Увійти в аккаунт"/>
+    <group
+        android:id="@+id/enter_in_account"
+        android:checkableBehavior="single">
+        <item android:title="@string/drawer_sign_in" />
     </group>
 
 </menu>

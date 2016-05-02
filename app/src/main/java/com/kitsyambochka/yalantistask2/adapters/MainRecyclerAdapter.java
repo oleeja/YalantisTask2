@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kitsyambochka.yalantistask2.R;
 import com.kitsyambochka.yalantistask2.activities.InfoActivity;
 import com.kitsyambochka.yalantistask2.utils.ItemContainer;
-import com.kitsyambochka.yalantistask2.R;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ import butterknife.OnClick;
 /**
  * Created by Developer on 14.04.2016.
  */
-public class MainRecyclerAdapter extends RecyclerView.Adapter {
+public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder> {
     private List<ItemContainer> mItemList;
     private Context mContext;
 
@@ -52,13 +52,13 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         ((ViewHolder) holder).mTvItemEconomy.setText(mItemList.get(position).getEconomy());
         ((ViewHolder) holder).mTvItemAddress.setText(mItemList.get(position).getAddress());
         ((ViewHolder) holder).mTvItemDate.setText(mItemList.get(position).getDate());

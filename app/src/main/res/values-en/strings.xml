@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">CE-1257218</string>
+    <string name="app_name">YalantisTask2</string>
+
+    <string name="screen_name">CE-1257218</string>
     <string name="created">Created</string>
     <string name="registered">Registered</string>
     <string name="decision">Resolve to</string>
     <string name="responsible">Responsible</string>
-
 
     <!--resources string-->
     <string name="economy_name">Municipal economy</string>
@@ -15,5 +16,32 @@
     <string name="responsible_name">Dnipropetrovsk MVK ()</string>
     <string name="description_name">Bad roads, in the streets: Popova and Khorolska, side street Khorolsky.
         In urban-type settlement Diyivka(178 km)</string>
+
+    <string-array name="link_photo">
+        <item>http://i.imgur.com/8SihmuM.jpg</item>
+        <item>http://i.imgur.com/W1SkL5G.jpg</item>
+        <item>http://i.imgur.com/Zb7vTJm.jpg</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="application_name">e-contact</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="tab_1">IN WORK</string>
+    <string name="tab_2">DONE</string>
+    <string name="tab_3">PENDING</string>
+    <string name="sing_with_love">Made with love \n<a href="IT Ruh Dnipro">IT Ruh Dnipro</a> and
+        <a href="Yalantis">Yalantis</a></string>
+    <string name="item_economy">Repair and maintenance of elevators</string>
+    <string name="item_address">Vadima Getmana St., 42</string>
+    <string name="item_date">26 April 2016</string>
+    <string name="item_days">-14 days</string>
+    <string name="item_second_economy">Cleaning and sanitary state</string>
+    <string name="all_appeals">All appeals</string>
+    <string name="drawer_all_appeals">All appeals</string>
+    <string name="drawer_on_map">Appeal on the map</string>
+    <string name="drawer_sign_in">Sign in</string>
 
 </resources>

@@ -6,8 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -19,13 +17,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="AppThemeInfo" parent="AppTheme.Base">
-    </style>
+    <style name="AppThemeInfo" parent="AppTheme.Base"/>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:colorPrimary">@color/colorPrimary</item>
-        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="colorControlNormal">@color/white</item>
     </style>
@@ -55,8 +49,7 @@
         <item name="android:textColor">@color/grey</item>
     </style>
 
-
-    <style name = "MyStyleForLayouts" parent="@android:style/TextAppearance.Medium">
+    <style name="MyStyleForLayouts" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -74,7 +67,11 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="MyStyleForTextViewLeft" parent="MyStyleForTextView">
+    <style name="MyStyleForTextViewRight" parent="MyStyleForTextView">
+        <item name="android:layout_width">@dimen/width_text_view</item>
+    </style>
+
+    <style name="MyStyleForTextViewLeft" parent="MyStyleForTextViewRight">
         <item name="android:textColor">@color/grey_dark</item>
     </style>
 
@@ -97,6 +94,5 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/item_height</item>
     </style>
-
 
 </resources>

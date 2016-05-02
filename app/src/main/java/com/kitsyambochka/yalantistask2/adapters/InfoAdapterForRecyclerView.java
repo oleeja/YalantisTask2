@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.kitsyambochka.yalantistask2.R;
 import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ import java.util.List;
  *
  *
  */
-public class InfoAdapterForRecyclerView extends RecyclerView.Adapter {
+public class InfoAdapterForRecyclerView extends RecyclerView.Adapter<InfoAdapterForRecyclerView.ViewHolder> {
 
     private List<Uri> mImageUri;
     private Context mContext;
@@ -38,15 +39,14 @@ public class InfoAdapterForRecyclerView extends RecyclerView.Adapter {
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_info, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
-        Picasso.with(mContext).load(mImageUri.get(position)).error(R.drawable.no_image)
-                .into(((ViewHolder) holder).mImageView);
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        Picasso.with(mContext).load(mImageUri.get(position)).into(((ViewHolder) holder).mImageView);
 
         ((ViewHolder) holder).mImageView.setOnClickListener(new View.OnClickListener() {
             @Override

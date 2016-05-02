@@ -40,5 +40,8 @@
     <string name="item_days">-14 днів</string>
     <string name="item_second_economy">Прибирання та санітарний стан</string>
     <string name="all_appeals">Всі звернення</string>
+    <string name="drawer_all_appeals">Всі звернення</string>
+    <string name="drawer_on_map">Звернення на мапі</string>
+    <string name="drawer_sign_in">Увійти в аккаунт</string>
 
 </resources>

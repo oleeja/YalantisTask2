@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ListView;
 
-import com.kitsyambochka.yalantistask2.utils.ItemContainer;
 import com.kitsyambochka.yalantistask2.R;
-import com.kitsyambochka.yalantistask2.interfaces.ScrollListener;
 import com.kitsyambochka.yalantistask2.adapters.MainListAdapter;
+import com.kitsyambochka.yalantistask2.interfaces.ScrollListener;
+import com.kitsyambochka.yalantistask2.utils.ItemContainer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +24,6 @@ public class FragmentForListView extends android.support.v4.app.Fragment {
     public final static String ITEMS_COUNT_KEY = "FragmentForListView$ItemsCount";
 
     private ScrollListener mScrollListener;
-
-    private int mPreviousScrollPosition;
-    private int mPreviousItemPosition;
-    private int minDistance = 0;
 
     private ListView mListView;
 
@@ -47,30 +43,26 @@ public class FragmentForListView extends android.support.v4.app.Fragment {
         setupListView(mListView);
 
         mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
+            int mLastFirstVisibleItem;
 
+            @Override
+            public void onScrollStateChanged(AbsListView view,
+                                             int scrollState) {
+                //TODO: some controls if they will need
             }
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                int currentScrollPosition = getCurrentScrollPosition();
-                if (firstVisibleItem == mPreviousItemPosition) {
-                    int scrolled = Math.abs(mPreviousScrollPosition - currentScrollPosition);
-                    if (scrolled > minDistance) {
-                        if (mPreviousScrollPosition > currentScrollPosition) {
-                            mScrollListener.onScrollUp(true);
-                        } else {
-                            mScrollListener.onScrollUp(false);
-                        }
+                if (view.getId() == mListView.getId()) {
+                    final int currentFirstVisibleItem = mListView.getFirstVisiblePosition();
+
+                    if (currentFirstVisibleItem > mLastFirstVisibleItem) {
+                        mScrollListener.onScrollUp(true);
+                    } else if (currentFirstVisibleItem < mLastFirstVisibleItem) {
+                        mScrollListener.onScrollUp(false);
                     }
-                } else if (firstVisibleItem > mPreviousItemPosition) {
-                    mScrollListener.onScrollUp(true);
-                } else {
-                    mScrollListener.onScrollUp(true);
+                    mLastFirstVisibleItem = currentFirstVisibleItem;
                 }
-                mPreviousScrollPosition = currentScrollPosition;
-                mPreviousItemPosition = firstVisibleItem;
             }
         });
         return mListView;
@@ -111,13 +103,5 @@ public class FragmentForListView extends android.support.v4.app.Fragment {
     public void onDetach() {
         super.onDetach();
         mScrollListener = null;
-    }
-
-    private int getCurrentScrollPosition() {
-        int pos = 0;
-        if (mListView.getChildAt(0) != null) {
-            pos = mListView.getChildAt(0).getTop();
-        }
-        return pos;
     }
 }

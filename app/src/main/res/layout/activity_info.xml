@@ -4,9 +4,9 @@
     android:orientation="vertical">
 
     <include
-        layout="@layout/toolbar"
+        layout="@layout/toolbar_info"
         android:id="@+id/info_toolbar"/>
     <include
-        layout="@layout/main_screen"/>
+        layout="@layout/info_screen"/>
 
 </LinearLayout>
